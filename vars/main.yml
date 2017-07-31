@@ -1,0 +1,8 @@
+---
+# vars file for confluent-platform
+confluent_platform_tgz: confluent-oss-{{confluent_platform_ver}}-{{confluent_platform_scala_ver}}.tar.gz
+confluent_platform_tgz_url: '{{confluent_platform_mirror}}/{{confluent_platform_ver_abbrev}}/{{confluent_platform_tgz}}'
+
+confluent_platform_name: confluent-{{confluent_platform_ver}}
+confluent_platform_install_dir: '{{confluent_platform_parent_install_dir}}/{{confluent_platform_name}}'
+confluent_platform_link_dir: '{{confluent_platform_parent_install_dir}}/confluent'

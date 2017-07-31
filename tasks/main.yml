@@ -1,0 +1,44 @@
+---
+- name: download tgz..
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{confluent_platform_tgz_url}}'
+    dest: /tmp/{{confluent_platform_tgz}}
+    mode: 0644
+
+- name: unarchive...
+  become: yes
+  become_user: root
+  unarchive:
+    remote_src: yes
+    src: /tmp/{{confluent_platform_tgz}}
+    dest: '{{confluent_platform_parent_install_dir}}'
+    creates: '{{confluent_platform_install_dir}}'
+
+- name: link...
+  become: yes
+  become_user: root
+  file:
+    src: '{{confluent_platform_install_dir}}'
+    dest: '{{confluent_platform_link_dir}}'
+    state: link
+
+- name: add confluent platform apps to the default login shell path...
+  become: yes
+  become_user: root
+  with_items:
+    - f: confluent.sh
+      d: /etc/profile.d
+  template:
+    src: '{{item.f}}.j2'
+    dest: '{{item.d}}/{{item.f}}'
+    mode: '{{item.m|default("0644")}}'
+
+- name: cleanup...
+  become: yes
+  become_user: root
+  when: confluent_platform_cleanup
+  file:
+    path: /tmp/{{confluent_platform_tgz}}
+    state: absent

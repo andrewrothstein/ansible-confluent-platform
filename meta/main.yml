@@ -1,0 +1,33 @@
+---
+galaxy_info:
+  author: Andrew Rothstein
+  description: installs the confluent oss platform
+  company: PointState Capital
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Alpine
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+  galaxy_tags:
+    - development
+
+dependencies:
+  - src: andrewrothstein.unarchive-deps
+    version: v1.0.9
+  - src: andrewrothstein.java-oracle-jre
+    version: v2.0.3

@@ -1,0 +1,11 @@
+---
+# defaults file for confluent-platform
+confluent_platform_mirror: http://packages.confluent.io/archive
+confluent_platform_ver: '3.2.2'
+confluent_platform_ver_abbrev: '3.2'
+confluent_platform_scala_ver: '2.11'
+
+confluent_platform_parent_install_dir: /usr/local
+
+confluent_platform_cleanup: False
+
