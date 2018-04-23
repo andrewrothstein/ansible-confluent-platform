@@ -4,13 +4,18 @@ confluent_platform_mirror: http://packages.confluent.io/archive
 confluent_platform_scala_ver: '2.11'
 confluent_platform_bundle: oss
 
-confluent_platform_major_ver: '4.0'
+confluent_platform_major_ver: '4.1'
 confluent_platform_minor_ver: '0'
 
 confluent_platform_checksums:
   '4.0.0':
     '2.11':
+      # http://packages.confluent.io/archive/4.0/confluent-oss-4.0.0-2.11.tar.gz
       oss: sha256:5cfa68b4368f28bd9231786bb710431394dc14a2b37eecf360e820271ee84f43
+  '4.1.0':
+    '2.11':
+      # http://packages.confluent.io/archive/4.1/confluent-oss-4.1.0-2.11.tar.gz
+      oss: sha256:32c3aff688d6f24e1ea573efdc4e16a3a5f466f1641b770ae4ba0350e7be583a
 
 confluent_platform_parent_install_dir: /usr/local
 
