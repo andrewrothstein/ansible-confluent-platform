@@ -26,4 +26,3 @@ confluent_platform_checksums:
       oss: sha256:05886d64c516af975621875f11e3f7657bf6b6169354b3496141150b1873c1ea
 
 confluent_platform_parent_install_dir: /usr/local
-
