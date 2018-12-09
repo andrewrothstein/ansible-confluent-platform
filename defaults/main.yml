@@ -5,7 +5,7 @@ confluent_platform_scala_ver: '2.11'
 confluent_platform_bundle: oss
 
 confluent_platform_major_ver: '5.0'
-confluent_platform_minor_ver: '0'
+confluent_platform_minor_ver: '1'
 
 confluent_platform_checksums:
   '4.0.0':
@@ -24,5 +24,9 @@ confluent_platform_checksums:
     '2.11':
       # http://packages.confluent.io/archive/5.0/confluent-oss-5.0.0-2.11.tar.gz
       oss: sha256:05886d64c516af975621875f11e3f7657bf6b6169354b3496141150b1873c1ea
+  '5.0.1':
+    '2.11':
+      # http://packages.confluent.io/archive/5.0/confluent-oss-5.0.1-2.11.tar.gz
+      oss: sha256:9d2a3b744f982e4004142411c49fb98952b768723911c9421b0302f15aea8c0d
 
 confluent_platform_parent_install_dir: /usr/local
