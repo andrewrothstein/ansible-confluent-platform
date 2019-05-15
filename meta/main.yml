@@ -1,35 +1,33 @@
----
+dependencies:
+- role: andrewrothstein.unarchive-deps
+  version: v1.0.10
+- role: andrewrothstein.bash
+  version: v1.1.1
+- role: andrewrothstein.openjdk
+  version: v1.0.0
 galaxy_info:
   author: Andrew Rothstein
-  description: installs the confluent oss platform
   company: PointState Capital
+  description: installs the confluent oss platform
+  galaxy_tags:
+  - development
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-  galaxy_tags:
-    - development
-
-dependencies:
-  - src: andrewrothstein.unarchive-deps
-    version: v1.0.10
-  - src: andrewrothstein.bash
-    version: v1.1.1
-  - src: andrewrothstein.java-oracle-jre
-    version: v2.1.2
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
